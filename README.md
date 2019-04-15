@@ -1,2 +1,4 @@
 # The_doorlock
-Made with Particle Argon, Nexa Socket, Nexa 433 mHZ button, 433 mHZ transmitter and the lock itself. Made because i live in a shared flat. TRUST NO ONE. Especially not students that lives beneath the poverty line. 
+
+The lock can be opened with the Nexa 433 mHZ button. The lock can also sense your presence by pinging the IP-address of your mobile phone. If found on network; unlock. If not found; lock. You therefor need to set a static IP for your phone(can be done in router settings). The lock that ive used is normally closed. It will for that reason also unlock if not powered by electricity. That is a problem. To figure out if one of my sneaky flatmates has turned of the electricity; The Photon then runs Particle.publish("POWERGONE", ""); in setup. Setup will run whenever Photon turns on. So, if the photon has to restart, then POWERGONE will be published. I have further integrated it with IFTTT. So, if the power goes out i will then get a notification on my phone. I will then know the exact time and can easily find the kleptomaniac on my raspberry pi with a camera module. 
+ 
